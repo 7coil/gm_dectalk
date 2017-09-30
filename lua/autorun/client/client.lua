@@ -27,5 +27,3 @@ end )
 concommand.Add( "tts_enable", function()
 	file.Write("tts.txt", "1")
 end )
-
-

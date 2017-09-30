@@ -4,7 +4,7 @@ util.AddNetworkString('dectalk')
 
 hook.Add( 'PlayerSay', 'dectalk', function( ply, text, teamchat )
 	net.Start('dectalk')
-	net.WriteString(url .. "/api/gen/?dectalk=" .. url_encode(text))
+	net.WriteString(url .. "/api/gen?dectalk=" .. url_encode(text))
 
 	if teamchat then
 		net.Send(team.GetPlayers(ply:Team()))
