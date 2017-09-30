@@ -6,9 +6,7 @@ net.Receive( "dectalk", function()
 		return print("[DECtalk] Blocked DECtalk. To enable, type `tts_enable`")
 	end
 
-	local text = url_encode(net.ReadString())
-
-	local disk = net.ReadBool()
+	local text = net.ReadString()
 
 	sound.PlayURL(text, "", function(station, id, msg)
 		if ( IsValid( station ) ) then
